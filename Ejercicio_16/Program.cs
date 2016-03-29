@@ -26,6 +26,36 @@ namespace Ejercicio_16
         static void Main(string[] args)
         {
             Console.Title = "Ejercicio Nro. 16";
+
+            Alumno alumno1 = new Alumno();
+            Alumno alumno2 = new Alumno();
+            Alumno alumno3 = new Alumno();
+
+            alumno1.apellido = "Romero";
+            alumno2.apellido = "Alba";
+            alumno3.apellido = "Araragi";
+
+            alumno1.nombre = "Federico";
+            alumno2.nombre = "Maka";
+            alumno3.nombre = "Koyomi";
+
+            alumno1.legajo = 123;
+            alumno2.legajo = 52;
+            alumno3.legajo = 15;
+
+            alumno1.Estudiar(2, 10);
+            alumno2.Estudiar(10, 10);
+            alumno3.Estudiar(9, 9);
+
+            alumno1.CalcularFinal();
+            alumno2.CalcularFinal();
+            alumno3.CalcularFinal();
+
+            alumno1.Mostrar();
+            alumno2.Mostrar();
+            alumno3.Mostrar();
+
+            Console.ReadKey();
         }
     }
 }

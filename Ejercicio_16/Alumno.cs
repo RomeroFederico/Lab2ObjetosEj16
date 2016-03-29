@@ -14,6 +14,24 @@ namespace Ejercicio_16
         public string nombre;
         public int legajo;
 
+        /// <summary>
+        /// Asigna las notas del alumno.
+        /// </summary>
+        /// <param name="notaUno">
+        /// Primera nota a asignar.
+        /// </param>
+        /// <param name="notaDos">
+        /// Segunda nota a asignar.
+        /// </param>
+        public void Estudiar(byte notaUno, byte notaDos)
+        {
+            this._nota1 = notaUno;
+            this._nota2 = notaDos;
+        }
+
+        /// <summary>
+        /// Calcula el resultado que tendra el final del alumno,
+        /// </summary>
         public void CalcularFinal()
         {
             Random rand = new Random();
@@ -23,12 +41,9 @@ namespace Ejercicio_16
                 this._notaFinal = -1;
         }
 
-        public void Estudiar(byte notaUno, byte notaDos)
-        {
-            this._nota1 = notaUno;
-            this._nota2 = notaDos;
-        }
-
+        /// <summary>
+        /// Muestra los datos del alumno.
+        /// </summary>
         public void Mostrar()
         {
             Console.WriteLine("Apellido: {0}", this.apellido);
@@ -38,6 +53,7 @@ namespace Ejercicio_16
             Console.WriteLine("Nota 2: {0}", this._nota2);
             if (this._notaFinal != -1)
                 Console.WriteLine("Nota Final: {0}", this._notaFinal);
+            Console.WriteLine("");
         }
     }
 }
