@@ -14,6 +14,13 @@ namespace Ejercicio_16
         public string nombre;
         public int legajo;
 
+        public static Random rand; 
+
+        static Alumno()
+        {
+            rand = new Random();
+        }
+
         /// <summary>
         /// Asigna las notas del alumno.
         /// </summary>
@@ -34,7 +41,6 @@ namespace Ejercicio_16
         /// </summary>
         public void CalcularFinal()
         {
-            Random rand = new Random();
             if (this._nota1 >= 4 && this._nota2 >= 4)
                 this._notaFinal = rand.Next(1, 10);
             else
